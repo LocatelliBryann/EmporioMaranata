@@ -78,7 +78,10 @@ npx vercel dev                   # site + função do Instagram
 ## Publicação
 
 - **Hospedagem:** Vercel (plano gratuito), ligada a este repositório. Todo push na `main` publica.
-- **Domínio:** `emporiomaranata.com.br` (a registrar no Registro.br). Depois de registrar, adicione o domínio em Vercel → Project → Domains e aponte o DNS como a Vercel indicar. Os metadados do site já usam esse domínio.
+- **Domínio:** `emporiomaranata.com.br` (a registrar no Registro.br). Depois de registrar, adicione o domínio em Vercel → Project → Domains e aponte o DNS como a Vercel indicar. Depois troque `https://emporiomaranata.vercel.app` por `https://emporiomaranata.com.br` em `index.html`, `robots.txt` e `sitemap.xml` (canonical, imagem de compartilhamento e dados estruturados).
+
+## Prévia de link (WhatsApp, Instagram, Facebook)
+A imagem é `assets/img/og.jpg` (1200×630). Se trocar a imagem, mude o `?v=2` nas tags `og:image` de `index.html` para `?v=3`: o WhatsApp guarda a prévia antiga em cache.
 
 ## Depois do lançamento
 

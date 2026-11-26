@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emporiomaranata.com.br/sitemap.xml
+Sitemap: https://emporiomaranata.vercel.app/sitemap.xml
