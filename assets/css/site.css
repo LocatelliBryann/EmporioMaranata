@@ -131,7 +131,7 @@ p { margin: 0; }
 .marca { display: flex; align-items: center; gap: .7rem; text-decoration: none; margin-right: auto; }
 .marca__icone { width: 2.4rem; height: 2.4rem; }
 .marca__icone svg { width: 100%; height: 100%; }
-.marca__nome { font-family: var(--serif); font-size: 1.3rem; font-variation-settings: "opsz" 48, "SOFT" 50; letter-spacing: .01em; }
+.marca__nome { white-space: nowrap; font-family: var(--serif); font-size: 1.3rem; font-variation-settings: "opsz" 48, "SOFT" 50; letter-spacing: .01em; }
 .menu { display: flex; gap: 1.75rem; }
 .menu a { text-decoration: none; font-weight: 500; font-size: 1rem; opacity: .85; position: relative; }
 .menu a::after {
@@ -143,7 +143,7 @@ p { margin: 0; }
 .topo__status {
   display: inline-flex; align-items: center; gap: .5rem;
   font-size: .9rem; font-weight: 600; text-decoration: none;
-  padding: .45rem .9rem; border-radius: 999px;
+  padding: .45rem .9rem; border-radius: 999px; white-space: nowrap;
   border: 1px solid currentColor; border-color: rgba(127, 140, 100, .45);
 }
 .topo__status::before {
@@ -384,11 +384,12 @@ p { margin: 0; }
   padding: 2rem var(--margem) 8rem; max-width: calc(var(--max) + 2 * var(--margem)); margin: 0 auto;
 }
 .nutri__foto {
-  position: relative; margin: 0; aspect-ratio: 4 / 5;
+  position: relative; margin: 0; aspect-ratio: 2 / 3;
   border-radius: 999px 999px var(--borda) var(--borda); /* arco, como a janela de um empório */
   overflow: hidden; background: var(--mata);
 }
-.nutri__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.nutri__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.nutri__foto::after { content: ""; position: absolute; inset: .75rem; border-radius: inherit; border: 1.5px solid rgba(220, 194, 138, .55); pointer-events: none; }
 .nutri__foto-vazia { position: absolute; inset: 0; display: none; place-items: center; color: var(--creme); }
 .nutri__foto-vazia svg { width: 55%; }
 .nutri__foto.sem-foto img { display: none; }
@@ -543,7 +544,7 @@ p { margin: 0; }
   .granel__fixo { grid-template-columns: 1fr; gap: 2rem; padding-top: 5.5rem; align-content: center; }
   .pote-grande { width: min(15rem, 62%); }
   .nutri, .visite { grid-template-columns: 1fr; }
-  .nutri__foto { max-width: 24rem; }
+  .nutri__foto { max-width: 22rem; }
   .insta__grade { grid-template-columns: 1fr; max-width: 26rem; }
   .mapa { min-height: 20rem; }
 }
@@ -552,7 +553,10 @@ p { margin: 0; }
   .pote__rotulo { font-size: .7rem; padding: .3rem .2rem; }
   .pote__selos { display: none; }
   .topo__status { font-size: .8rem; padding: .4rem .7rem; }
-  .marca__nome { font-size: 1.1rem; }
+  .marca__nome { font-size: 1.05rem; }
+  .marca { gap: .5rem; }
+  .marca__icone { width: 2rem; height: 2rem; }
+  .topo { gap: .75rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

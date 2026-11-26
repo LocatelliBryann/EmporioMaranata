@@ -42,8 +42,8 @@ Abra `assets/js/produtos.js`. Cada item tem `nome`, `tipo` (o desenho dentro do 
 
 > A lista inicial foi montada a partir do Instagram da loja e precisa ser conferida com o que a loja realmente vende.
 
-### Colocar a foto da Patricia
-Salve uma foto vertical (proporção 4:5, pelo menos 720×900) como `assets/img/patricia.jpg`. Enquanto o arquivo não existir, aparece a logo no lugar.
+### Trocar a foto da Patricia
+Substitua `assets/img/patricia.jpg` e `assets/img/patricia.webp` por uma foto vertical (proporção 2:3). Se os arquivos sumirem, aparece a logo no lugar.
 
 ### Mudar horário, WhatsApp ou endereço
 Tudo está em `LOJA`, no fim de `assets/js/produtos.js`. O horário também aparece em `index.html` (tabela e dados estruturados); mude nos dois lugares.
