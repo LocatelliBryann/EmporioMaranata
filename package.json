@@ -1,12 +1,23 @@
 {
   "name": "emporio-maranata",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Site do Empório Maranata — produtos naturais, granel e suplementos em Joinville",
+  "description": "Site do Empório Maranata — produtos naturais, granel e suplementos em Joinville/SC",
   "type": "module",
   "scripts": {
     "dev": "npx --yes vercel dev",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "validar": "npx --yes html-validate@9 index.html 404.html && for f in assets/js/*.js api/*.js; do node --check \"$f\"; done",
+    "imagens": "python3 scripts/gerar-imagens.py http://localhost:8000"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://emporiomaranata.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LocatelliBryann/EmporioMaranata"
+  },
+  "author": "Bryann Locatelli",
+  "license": "MIT"
 }

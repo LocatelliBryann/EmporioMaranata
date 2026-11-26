@@ -1,0 +1,28 @@
+name: Qualidade
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: HTML e JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validar HTML
+        run: npx --yes html-validate@9 index.html 404.html
+      - name: Checar sintaxe do JavaScript
+        run: |
+          for f in assets/js/*.js api/*.js; do node --check "$f"; done
+      - name: Checar JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('vercel.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('site.webmanifest','utf8'))"

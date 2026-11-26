@@ -365,7 +365,7 @@ p { margin: 0; }
   font-family: var(--serif); font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 1.12; font-weight: 300;
   font-variation-settings: "opsz" 144, "SOFT" 100; letter-spacing: -.02em;
   border-bottom: 1px solid rgba(34, 48, 24, .15); padding: .65rem 0;
-  color: rgba(28, 38, 20, .28); transition: color .8s var(--ease);
+  color: #7a826a; transition: color .8s var(--ease);
 }
 .mesas__lista li::before {
   content: ""; flex: none; width: .7em; height: .7em; border-radius: 50%;
