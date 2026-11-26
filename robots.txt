@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emporiomaranata.com.br/sitemap.xml
